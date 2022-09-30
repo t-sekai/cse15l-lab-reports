@@ -7,7 +7,7 @@
   - [Install VSCode](#install-vscode)
     - [Step 1: Download VSCode for your operating system from Download VSCode](#step-1-download-vscode-for-your-operating-system-from-download-vscode)
     - [Step 2: Open VSCode](#step-2-open-vscode)
-  - [Remotely Connecting to Secure Shell (SSH)](#remotely-connecting-to-secure-shell-ssh)
+  - [Remotely Connecting to UCSD Servers](#remotely-connecting-to-ucsd-servers)
     - [Step 1: Get your account information](#step-1-get-your-account-information)
     - [Step 2: Connecting to Remote Server](#step-2-connecting-to-remote-server)
   - [Some Commands You Can Try](#some-commands-you-can-try)
@@ -33,7 +33,7 @@ Open VSCode in your Application folder and begin programming in a great code edi
 
 ***
 
-## Remotely Connecting to Secure Shell (SSH)
+## Remotely Connecting to UCSD Servers
 
 Why do we want to connect to a secure shell, aka ssh? The remote server can be more powerfull and be in a different operating system that you want to use. We have the Linux operating system on the UCSD computers.
 
