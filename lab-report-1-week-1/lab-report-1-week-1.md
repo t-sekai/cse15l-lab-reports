@@ -20,7 +20,7 @@
     - [Concatenate (*cat*)](#concatenate-cat)
     - [Copy (*cp*)](#copy-cp)
     - [Exit (*exit or Ctrl-d*)](#exit-exit-or-ctrl-d)
-  - [Moving Files with *scp*](#moving-files-with-scp)
+  - [Copying Files with *scp*](#copying-files-with-scp)
   - [Setting an SSH Key](#setting-an-ssh-key)
   - [Optimze Remote Running](#optimze-remote-running)
     - [Using Tab](#using-tab)
@@ -80,29 +80,34 @@ It is very important to know your terminal commands! Here are some you can try!
 ### Print Working Directory (*pwd*)
 
 ```bash
-pwd
 #returns the current working directory 
+
+pwd
 ```
 ![](pwd.png)
 
 ### List (*ls*)
 
 ```bash
-ls
 #returns the visible files in your directory
 
-ls -a
+ls [directory]
+
 #returns both the visible and hidden files in your directory
+
+ls [directory] -a
 ```
 ![](ls.png)
 ### Change Directory (*cd*)
 
 ```bash
-cd [directory]
 #change to your intended directory
 
-cd ..
+cd [directory]
+
 #returns to the parent directory
+
+cd ..
 ```
 
 ![](cd.png)
@@ -110,54 +115,84 @@ cd ..
 ### Make/Remove Directory (*mkdir / rmdir*)
 
 ```bash
-mkdir <directory>
 #creates your intended directory
 
-rmdir <directory>
+mkdir <directory>
+
 #removes your intended directory
+
+rmdir <directory>
 ```
 
 ![](mkdir.png)
 ### Create File (*touch*)
 
 ```bash
-touch <file>
 #creates your intended file
+
+
+touch <file>
 ```
 
 ### Remove File (*rm*)
 
 ```bash
-rm <file>
 #removes your intended file
+
+rm <file>
 ```
 
 ### Concatenate (*cat*)
 
 ```bash
-cat <file> ... [more files]
 #previous your intended file
+
+cat <file> ... [more files]
 ```
 
 ### Copy (*cp*)
 
 ```bash
-cp <folder/file> <destination>
-#previous your intended file
+#copy your intended file to your intended destination
+
+cp <source file/dir> <destination file/dir>
 ```
 
 ### Exit (*exit or Ctrl-d*)
 
 ```bash
+#exits remote server (or current session)
+
 exit
 or Ctrl-d
-#exits remote server
 ```
 
 ***
 
-## Moving Files with *scp*
+## Copying Files with *scp*
 
+If we want to copy a file from your local computer to the remote server (or vice versa), we need to use the *scp* instead of the *cp*, which only works in the same system.
+
+```bash
+scp <source file/dir> <destination file/dir>
+```
+
+Here is an example with UCSD Server:
+```bash
+#We have WhereAmI.java in the local computer, and we want to copy it to the remote server.
+
+scp WhereAmI.java username@ieng6.ucsd.edu:
+
+#We want to copy it back after some edits.
+
+scp username@ieng6.ucsd.edu:~/WhereAmI.java ~
+```
+
+![](scp1.png)
+
+![](scp2.png)
+
+![](scp3.png)
 
 ***
 
