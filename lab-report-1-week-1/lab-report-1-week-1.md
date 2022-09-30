@@ -14,13 +14,17 @@
     - [Print Working Directory (*pwd*)](#print-working-directory-pwd)
     - [List (*ls*)](#list-ls)
     - [Change Directory (*cd*)](#change-directory-cd)
-    - [Make Directory (*mkdir*)](#make-directory-mkdir)
+    - [Make/Remove Directory (*mkdir / rmdir*)](#makeremove-directory-mkdir--rmdir)
+    - [Create File (*touch*)](#create-file-touch)
+    - [Remove File (*rm*)](#remove-file-rm)
     - [Concatenate (*cat*)](#concatenate-cat)
     - [Copy (*cp*)](#copy-cp)
     - [Exit (*exit or Ctrl-d*)](#exit-exit-or-ctrl-d)
   - [Moving Files with *scp*](#moving-files-with-scp)
   - [Setting an SSH Key](#setting-an-ssh-key)
   - [Optimze Remote Running](#optimze-remote-running)
+    - [Using Tab](#using-tab)
+    - [Using a Script](#using-a-script)
 
 ***
 
@@ -57,7 +61,7 @@ Go to [Account Lookup](https://sdacs.ucsd.edu/~icc/index.php) and enter your UCS
 ### Step 2: Connecting to Remote Server
 
 Open terminal or command line on your computer. Run the following code (remember to substitute the 'username' with your own) :
-```
+```bash
 ssh username@ieng6.ucsd.edu
 ```
 
@@ -75,7 +79,7 @@ It is very important to know your terminal commands! Here are some you can try!
 
 ### Print Working Directory (*pwd*)
 
-```
+```bash
 pwd
 #returns the current working directory 
 ```
@@ -83,7 +87,7 @@ pwd
 
 ### List (*ls*)
 
-```
+```bash
 ls
 #returns the visible files in your directory
 
@@ -93,25 +97,67 @@ ls -a
 ![](ls.png)
 ### Change Directory (*cd*)
 
-```
+```bash
 cd [directory]
 #change to your intended directory
+
+cd ..
+#returns to the parent directory
 ```
+
 ![](cd.png)
 
-### Make Directory (*mkdir*)
+### Make/Remove Directory (*mkdir / rmdir*)
 
+```bash
+mkdir <directory>
+#creates your intended directory
 
+rmdir <directory>
+#removes your intended directory
+```
+
+![](mkdir.png)
+### Create File (*touch*)
+
+```bash
+touch <file>
+#creates your intended file
+```
+
+### Remove File (*rm*)
+
+```bash
+rm <file>
+#removes your intended file
+```
 
 ### Concatenate (*cat*)
 
+```bash
+cat <file> ... [more files]
+#previous your intended file
+```
+
 ### Copy (*cp*)
 
+```bash
+cp <folder/file> <destination>
+#previous your intended file
+```
+
 ### Exit (*exit or Ctrl-d*)
+
+```bash
+exit
+or Ctrl-d
+#exits remote server
+```
 
 ***
 
 ## Moving Files with *scp*
+
 
 ***
 
@@ -120,3 +166,6 @@ cd [directory]
 ***
 
 ## Optimze Remote Running
+### Using Tab
+
+### Using a Script
