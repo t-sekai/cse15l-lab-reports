@@ -22,6 +22,8 @@
     - [Exit (*exit or Ctrl-d*)](#exit-exit-or-ctrl-d)
   - [Copying Files with *scp*](#copying-files-with-scp)
   - [Setting an SSH Key](#setting-an-ssh-key)
+    - [Step 1: Generate a Key](#step-1-generate-a-key)
+    - [Step 2: Copy the Public Key to the Remote Server](#step-2-copy-the-public-key-to-the-remote-server)
   - [Optimze Remote Running](#optimze-remote-running)
     - [Using Tab](#using-tab)
     - [Using a Script](#using-a-script)
@@ -197,6 +199,48 @@ scp username@ieng6.ucsd.edu:~/WhereAmI.java ~
 ***
 
 ## Setting an SSH Key
+
+### Step 1: Generate a Key
+
+```bash
+#Running this in your local will create an SSH Key
+
+ssh-keygen
+```
+
+The terminal will prompt you which file to save the key in. Press enter for the default location. Next, it will prompt you to enter a passphrase for your key. Press enter for no passphrase.
+
+![](ssh-keygen.png)
+
+Now, you can find *id_rsa* and *id_rsa.pub* in *~/.ssh* on your computer.
+
+### Step 2: Copy the Public Key to the Remote Server
+
+First, log in to your remote server. We want to copy the public key to the .ssh directory (which we need to make) on the server.
+
+```bash
+# This will create the .ssh directory to the server
+
+mkdir .ssh
+```
+
+Next, exit the server. In local, we want to copy the public key to the directory through the *scp* command.
+
+```bash
+# This will copy the public key to the .ssh directory in the remote server
+
+scp /Users/computer_username/.ssh/id_rsa.pub username@ieng6.ucsd.edu:~/.ssh/authorized_keys
+
+# Use your own computer username and cs15l account username.
+```
+
+![](ssh_scp.png)
+
+After doing this, you can enter or copy files to the remote server using *ssh* and *scp* without having to enter your password.
+
+![](ssh_noPwd.png)
+
+Congrats you have set up your ssh key! Now, you can access the remote server more efficiently.
 
 ***
 
