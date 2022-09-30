@@ -11,6 +11,13 @@
     - [Step 1: Get your account information](#step-1-get-your-account-information)
     - [Step 2: Connecting to Remote Server](#step-2-connecting-to-remote-server)
   - [Some Commands You Can Try](#some-commands-you-can-try)
+    - [Print Working Directory (*pwd*)](#print-working-directory-pwd)
+    - [List (*ls*)](#list-ls)
+    - [Change Directory (*cd*)](#change-directory-cd)
+    - [Make Directory (*mkdir*)](#make-directory-mkdir)
+    - [Concatenate (*cat*)](#concatenate-cat)
+    - [Copy (*cp*)](#copy-cp)
+    - [Exit (*exit or Ctrl-d*)](#exit-exit-or-ctrl-d)
   - [Moving Files with *scp*](#moving-files-with-scp)
   - [Setting an SSH Key](#setting-an-ssh-key)
   - [Optimze Remote Running](#optimze-remote-running)
@@ -63,6 +70,44 @@ Congrats! You successfully connected to the UCSD Remote Server. If your password
 ***
 
 ## Some Commands You Can Try
+
+It is very important to know your terminal commands! Here are some you can try!
+
+### Print Working Directory (*pwd*)
+
+```
+pwd
+#returns the current working directory 
+```
+![](pwd.png)
+
+### List (*ls*)
+
+```
+ls
+#returns the visible files in your directory
+
+ls -a
+#returns both the visible and hidden files in your directory
+```
+![](ls.png)
+### Change Directory (*cd*)
+
+```
+cd [directory]
+#change to your intended directory
+```
+![](cd.png)
+
+### Make Directory (*mkdir*)
+
+
+
+### Concatenate (*cat*)
+
+### Copy (*cp*)
+
+### Exit (*exit or Ctrl-d*)
 
 ***
 
