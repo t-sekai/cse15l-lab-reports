@@ -25,7 +25,8 @@
     - [Step 1: Generate a Key](#step-1-generate-a-key)
     - [Step 2: Copy the Public Key to the Remote Server](#step-2-copy-the-public-key-to-the-remote-server)
   - [Optimze Remote Running](#optimze-remote-running)
-    - [Using Tab](#using-tab)
+    - [Using *Tab*](#using-tab)
+    - [Look into Past Commands](#look-into-past-commands)
     - [Using a Script](#using-a-script)
 
 ***
@@ -245,6 +246,15 @@ Congrats you have set up your ssh key! Now, you can access the remote server mor
 ***
 
 ## Optimze Remote Running
-### Using Tab
+
+We could be calling identical or similar lines of commands over and over many times. We can optimize and improve our experience by lessening the ammount of lines we have to write. Below, are a few ways to optimize your experience in remote running:
+
+### Using *Tab*
+
+### Look into Past Commands
 
 ### Using a Script
+
+***
+
+***Good Job! You have reached the end of the tutorial to run remote server. See you next time!***
