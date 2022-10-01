@@ -174,7 +174,7 @@ or ctrl-d
 
 ## Copying Files with *scp*
 
-If we want to copy a file from your local computer to the remote server (or vice versa), we need to use the *scp* instead of the *cp*, which only works in the same system.
+If you want to copy a file from your local computer to the remote server (or vice versa), you will need to use the *scp* instead of the *cp*, which only works in the same system.
 
 ```bash
 scp <source file/dir> <destination file/dir>
@@ -342,8 +342,8 @@ You can also write a bash script to run your commonly used command combos.
 > ```bash
 > #!/bin/bash
 >
-> #SOURCE=$1
-> #DESTINATION=$2
+> # SOURCE=$1
+> # DESTINATION=$2
 >
 > scp $1 cs15lfa22lb@ieng6.ucsd.edu:$2
 > ```
