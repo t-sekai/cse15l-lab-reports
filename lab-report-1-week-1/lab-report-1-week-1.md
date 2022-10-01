@@ -1,5 +1,5 @@
 # Week 1: Lab Report 1
-*By Kevin Chan, September 30, 2022*
+***By Kevin Chan (t-sekai), September 30, 2022***
 
 ## Table of Content
 - [Week 1: Lab Report 1](#week-1-lab-report-1)
@@ -25,9 +25,9 @@
     - [Step 1: Generate a Key](#step-1-generate-a-key)
     - [Step 2: Copy the Public Key to the Remote Server](#step-2-copy-the-public-key-to-the-remote-server)
   - [Optimize Remote Running](#optimize-remote-running)
-    - [Using *Tab*](#using-tab)
+    - [Use *Tab*](#use-tab)
     - [Look into Past Commands](#look-into-past-commands)
-    - [Using a Script](#using-a-script)
+    - [Use a Script](#use-a-script)
 
 ***
 
@@ -72,7 +72,7 @@ It will look something like this:
 
 ![](ssh_login.png)
 
-Congrats! You successfully connected to the UCSD Remote Server. If your password isn't working, maybe the server hasn't been updated with your new password yet.
+Congrats! You've successfully connected to the UCSD Remote Server. If your password isn't working, maybe the server hasn't been updated with your new password yet.
 
 ***
 
@@ -148,7 +148,7 @@ rm <file>
 ### Concatenate (*cat*)
 
 ```bash
-#previous your intended file
+#preview your intended file
 
 cat <file> ... [more files]
 ```
@@ -249,7 +249,7 @@ Congrats you have set up your ssh key! Now, you can access the remote server mor
 
 We could be calling identical or similar lines of commands over and over many times. We can optimize and improve our experience by lessening the ammount of lines we have to write. Below, are a few ways to optimize your experience in remote running:
 
-### Using *Tab*
+### Use *Tab*
 
 The *tab* button can autocomplete some of the commands. 
 
@@ -308,7 +308,7 @@ Find more example in [Command-line Completion](https://en.wikipedia.org/wiki/Com
 > 
 > Here, I entered *ssh* and the terminal helped me find my intended command that I used in the past. If you can't find the command, you can try to use *ctrl-r* again or provide more information about your intended command.
 
-### Using a Script
+### Use a Script
 
 You can also write a bash script to run your commonly used command combos.
 
