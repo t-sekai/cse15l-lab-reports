@@ -19,7 +19,7 @@
     - [Remove File (*rm*)](#remove-file-rm)
     - [Concatenate (*cat*)](#concatenate-cat)
     - [Copy (*cp*)](#copy-cp)
-    - [Exit (*exit or Ctrl-d*)](#exit-exit-or-ctrl-d)
+    - [Exit (*exit or ctrl-d*)](#exit-exit-or-ctrl-d)
   - [Copying Files with *scp*](#copying-files-with-scp)
   - [Setting an SSH Key](#setting-an-ssh-key)
     - [Step 1: Generate a Key](#step-1-generate-a-key)
@@ -161,13 +161,13 @@ cat <file> ... [more files]
 cp <source file/dir> <destination file/dir>
 ```
 
-### Exit (*exit or Ctrl-d*)
+### Exit (*exit or ctrl-d*)
 
 ```bash
 #exits remote server (or current session)
 
 exit
-or Ctrl-d
+or ctrl-d
 ```
 
 ***
@@ -251,9 +251,109 @@ We could be calling identical or similar lines of commands over and over many ti
 
 ### Using *Tab*
 
+The *tab* button can autocomplete some of the commands. 
+
+> For example, the *tab* button can autocomplete finding the directories in *cd*.
+> ```bash
+> # Let's say you want to cd Desktop/
+>
+> cd D
+>
+> # If you press tab once or twice, the terminal will autocomplete 
+>
+> cd Desktop/
+> Desktop/    Documents/  Downloads/
+>
+> # You can press tab again for Document
+>
+> cd Documents/
+> Desktop/    Documents/  Downloads/
+> ```
+> Try it on your own!
+
+Find more example in [Command-line Completion](https://en.wikipedia.org/wiki/Command-line_completion).
+
 ### Look into Past Commands
 
+1. If you have used identical commands before, you can find your past commands by simply using the *up* and *down* buttons. 
+
+> For example,
+> ```bash
+> # Let's say we used the following commands in order
+>
+> cd Desktop/
+> ls
+> cd ..
+> 
+> # Let's say we want to use cd Desktop/ again
+> # We can press up three times to the third recent command, which is cd Desktop/
+> 
+> cd Dekstop/
+> 
+> # Let's say we want to use ls instead
+> # We can press down one time to the second recent command, which is ls
+>
+>ls
+> ```
+>Try it on your own!
+
+
+2. If the past commands was too long ago, you can search for it using the command *ctrl-r* to open the backward in history (bck-i-search) tool.
+   
+> ![](ctrl-r1.png)
+>
+> Start to enter the command you want to write, the search will help you find it from your bash history. Let's say we want to find our *ssh* command to the remote server.
+>
+> ![](ctrl-r2.png)
+> 
+> Here, I entered *ssh* and the terminal helped me find my intended command that I used in the past. If you can't find the command, you can try to use *ctrl-r* again or provide more information about your intended command.
+
 ### Using a Script
+
+You can also write a bash script to run your commonly used command combos.
+
+1. First, you can create an *.sh* file on your local computer using VSCode or terminal. 
+2. Put #!/bin/bash in your first line. 
+3. Next, type your commands in the following lines. 
+4. At last, when you need to use the script, call it in the terminal by:
+  ```bash
+  sh <script_file> [$1] [$2] ... [arguments]
+  ```
+
+> Example 1: Connect to the remote server
+>
+> It can always be quite annoying to type your username every single time you want to log in to the remote server.
+>
+> ssh_15l.sh
+> ```bash
+> #!/bin/bash
+> 
+> ssh username@ieng6.ucsd.edu
+> ```
+> Now, we can run this program in the terminal:
+> 
+> ![](sh_ex1.png)
+
+> Example 2: Send files to the remote server
+>
+> Similar to the first example, the *scp* commands can be quite long.
+>
+> scp_15l.sh
+> ```bash
+> #!/bin/bash
+>
+> #SOURCE=$1
+> #DESTINATION=$2
+>
+> scp $1 cs15lfa22lb@ieng6.ucsd.edu:$2
+> ```
+> Now, we can run this program in the terminal. Also, *$x* means the *x*-th parameter.
+>
+> ![](sh_ex2.png)
+>
+> Here, WhereAmI.java in Desktop is copied to the current/default (.) directory in the remote server.
+
+Although I am only running one command in my script, you can have multiple command run at once. It can sure save a lot of time from running common long commands everytime. You should definitely learn and play with it on your own! 
 
 ***
 
