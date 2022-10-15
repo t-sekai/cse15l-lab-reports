@@ -125,12 +125,12 @@ Now, we can run the server on our browsers:
   * Expected: {3,2,1}
 
 * **Bug (the code fix needed)**
-  * The loop iterates through the array and changes the values that is needed later 
+  * The loop iterates through the array and changes the values that is needed later.
+  * A way to fix the bug is by making a copy of the orginal array and copy the values from that array, so we don't copy values that was changed.
 
 * **Connection between the Symptom and the Bug**
   * The loop overwrites the elements in the first half with the elements in the second half. 
   * When the elements in the second half want to copy the elements in the first half, it would just be copying itself.
-  * A way to fix the bug is by making a copy of the orginal array and copy the values from that array, so we don't copy values that was changed.
 
 ### **append()** in LinkedListExample.java
 
@@ -154,7 +154,7 @@ Now, we can run the server on our browsers:
     }  
     ```
   * n.next is created at every loop iteration; therefore, the ending condition n.next == null is never satisfied. 
+  * A way to fix the bug is by assigning n.next to a new Node after the loop ends finding the last node in the list.
 
 * **Connection between the Symptom and the Bug**
   * When appending the third value into the linkedlist, the program started iterating through the while loop. However, since the while loop never ends, the program kept on creating new n.next and never finished running.
-  * A way to fix the bug is by assinig n.next to a new Node after the loop ends finding the last node in the list.
