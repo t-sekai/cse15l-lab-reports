@@ -88,7 +88,7 @@ Now, we can run the server on our browsers:
 
 ![](browser_3.png)
 
->1. handleRequest() is called with relevant value of the url path value and the query value, which is "/add" and "s=apple", respectfully. A relevant value of the class is the content string list.
+>1. handleRequest() is called with relevant value of the url path value and the query value, which is "/add" and "s=apple" respectfully. A relevant value of the class is the content string list.
 >2. The method finds the intended add value "apple" by splitting the query value.
 >3. The value is added to the content string list *string*; {} -> {"apple"}.
 
@@ -96,17 +96,17 @@ Now, we can run the server on our browsers:
 
 ![](browser_4.png)
 
->1. handleRequest() is called with relevant value of the url path value and the query value, which is "/add" and "s=samsung", respectfully. A relevant value of the class is the content string list.
+>1. handleRequest() is called with relevant value of the url path value and the query value, which is "/add" and "s=samsung" respectfully. A relevant value of the class is the content string list.
 >2. The method finds the intended add value "samsung" by splitting the query value.
 >3. The value is added to the content string list *string*; {"apple"} -> {"apple", "samsung"}.
 
 ***
 
-### **Using the search method**
+### **Using the *search* method**
 
 ![](browser_5.png)
 
->1. handleRequest() is called with relevant value of the url path value and the query value, which is "/search" and "s=app", respectfully. A relevant value of the class is the content string list.
+>1. handleRequest() is called with relevant value of the url path value and the query value, which is "/search" and "s=app" respectfully. A relevant value of the class is the content string list.
 >2. The method finds the intended search value "app" by splitting the query value.
 >3. The substring value is searched in the content string list *string*, which has the strings {"apple", "samsung"}.
 >4. The method returns all the strings that has the substring "app".
@@ -157,3 +157,4 @@ Now, we can run the server on our browsers:
 
 * **Connection between the Symptom and the Bug**
   * When appending the third value into the linkedlist, the program started iterating through the while loop. However, since the while loop never ends, the program kept on creating new n.next and never finished running.
+  * A way to fix the bug is by assinig n.next to a new Node after the loop ends finding the last node in the list.
