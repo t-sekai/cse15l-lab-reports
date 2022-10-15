@@ -12,4 +12,7 @@
 [Lab Report 1(Full link)](https://t-sekai.github.io/cse15l-lab-reports/lab-report-1-week-0/lab-report-1-week-0.html)
 
 ## Week 1
-[Lab Report 1](lab-report-1-week-1/lab-report-1-week-1.md)
+[Lab Report 1](lab-report-1-week-1/lab-report-1-week-1.html)
+
+## Week 3
+[Lab Report 1](lab-report-1-week-3/lab-report-1-week-3.html)
