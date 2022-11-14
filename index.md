@@ -19,3 +19,6 @@
 
 ## Week 5
 [Lab Report 1](lab-report-1-week-5/lab-report-1-week-5.html)
+
+## Week 7
+[Lab Report 1](lab-report-week7/report4.html)
