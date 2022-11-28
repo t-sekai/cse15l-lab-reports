@@ -195,7 +195,7 @@ fi
 
 **cat result.txt**
 
-**PASS=$(tail -c 3 result.txt | head -n 1)**
+**PASS=\$(tail -c 3 result.txt \| head -n 1)**
 
 **echo "Score: \$[2-\$PASS]/2"**
 
